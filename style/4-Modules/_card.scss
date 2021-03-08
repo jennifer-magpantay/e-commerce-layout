@@ -40,7 +40,7 @@
   // &__body {}
   &__title {
     @include subtitle;
-    color: $dk-gray;
+    margin-top: 1rem;
     font-size: clamp(1.6rem, 2vw, 2rem);
   }
 

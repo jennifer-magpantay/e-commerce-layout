@@ -3,22 +3,25 @@ footer {
   height: auto;
   padding: 2% 0;
   background-color: $dk-gray;
-  
 
   .footer__container {
     width: auto;
     margin: 0 auto;
     padding: 1% 0;
     color: $text-color-lg;
-    text-align: center;    
+    text-align: center;
+
+    ul {
+      margin-bottom: 2rem;
+    }
 
     a {
       @include caption;
-      font-size: 1.4em;
+      font-size: 1.6rem;
       letter-spacing: 1px;
     }
-  }  
+  }
   .caption {
     font-size: 1.2rem;
-  } 
+  }
 }
