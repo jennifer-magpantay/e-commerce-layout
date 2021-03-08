@@ -1,0 +1,97 @@
+header {
+    @include grid-column-10;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid $md-gray;
+
+    .header__links--categories {
+        @include flex;
+        width: 100%;
+        margin-top: 2rem;
+
+        .dropdown {
+            @include caption;
+            width: 100%;
+            display: flex;
+            color: $text-color;
+            a,
+            li,
+            span {
+                font-size: 1.6rem;
+            }
+
+            &__item {
+                position: relative;
+                margin-right: 1rem;
+
+                // setting animation to expand the submenu when the item is hovered
+                &:hover {
+                    .dropdown__submenu {
+                        opacity: 1;
+                        transform: translateX(-50%) rotateX(0);
+                        transition-timing-function: ease-out;
+                    }
+                }
+            }
+
+            &__link {
+                text-decoration: none;
+
+                // to improve acessibility, add the underline when links are hovered
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            // this submenu has to be shown just when its item is hovered
+            &__submenu {
+                width: calc(100% + 2rem);
+                position: absolute;
+                top: calc(100% + 1rem);
+                left: 50%;
+                padding: 1rem 0;
+                background-color: #f2f2f2;
+                border-radius: 3px;
+                box-shadow: $box-shadow;
+                color: $text-color;
+                font-size: 1.4rem;
+                opacity: 0.25;
+                // add all transforms to create the dropdown effect
+                transform: translateX(-50%) rotateX(-90deg);
+                transform-origin: top center;
+                transition: all 150ms ease-in;
+
+                // to create an arrow pointing up by suing :after
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 1rem;
+                    top: -0.7rem;
+                    border: 0.8rem solid #f2f2f2;
+                    border-radius: 2px;
+                    transform: rotate(45deg);
+                }
+
+                &-item {
+                    width: 100%;
+                   
+                    &:first-child {
+                        margin-top: 0.5rem;
+                    }
+                }
+
+                &-link {
+                   display: block;
+                    padding: 0.5rem;
+                    text-decoration: none;
+
+                    &:hover {                                            
+                        background-color:$primary-color;
+                        color: $text-color-lg;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

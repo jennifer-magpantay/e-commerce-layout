@@ -1,0 +1,13 @@
+main {
+    width: 100%;
+    min-height: 100vh;
+   
+    h1 {
+        @include title;
+        margin: 1rem 8.33%;
+    }
+
+    .caption {
+        color: $primary-color;
+    }
+}

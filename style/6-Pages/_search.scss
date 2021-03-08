@@ -1,0 +1,30 @@
+.search {
+    @include col-10;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: left;
+
+    aside {
+        @include col-06;
+        border: 1px solid $md-gray;
+    }
+
+    h3 {
+        font-weight: bold;
+    } 
+
+    .category {
+        width: 100%;
+        display: inline-block;
+        color: $md-gray;
+        border-bottom: 1px solid $lg-gray;
+        margin-bottom: $margin;
+        padding-bottom: $margin;
+    }
+
+    .results {
+        margin-left: $margin;
+        padding: 1.6em;   
+        border: 1px solid $md-gray;
+    }
+}

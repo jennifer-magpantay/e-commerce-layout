@@ -1,0 +1,43 @@
+// CAROUSSEL
+// seeting flex & scroll properties to items
+.caroussel__items {
+    width: 100%;
+    height: auto;    
+    display: flex;
+    align-items: flex-start;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @include mobile {
+        max-height: 400px;
+    }
+  
+    // unsetting the flex properties to the single item
+    .item__img {
+        // width: auto;
+        // min-width: 85%;       
+        // max-height: 380px;
+        width: 90%;
+        height: auto;
+        flex: none;
+        border-radius: 4px;
+        pointer-events: none;
+        object-fit: cover;
+        scroll-snap-align: start;
+
+        &:not(:last-child) {
+            margin-right: 0.5em;
+        }   
+        
+        @include mobile {
+            width: auto;
+            max-height: 380px;
+        }
+   }
+}
+// hiding the scrollbar
+::-webkit-scrollbar {
+    width: 0px;
+}

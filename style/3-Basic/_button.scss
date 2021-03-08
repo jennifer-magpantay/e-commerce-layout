@@ -1,0 +1,31 @@
+%button {
+    display: inline-block;
+    padding: 1rem 1.6rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.button {
+    @extend %button;  
+    margin-top: 1rem;
+    background-color: $primary-color;
+    box-shadow: $box-shadow;
+    color: $text-color-lg;   
+    &:hover {
+        background-color: darken($primary-color, 15%);
+        text-decoration: none;
+    }
+}
+
+.button--unavailable,
+.button--search {
+    @extend %button;
+    background-color: $dk-gray;
+    color: $text-color-lg;
+    &:hover {
+        background-color: lighten($dk-gray, 15%);
+    }
+}

@@ -1,0 +1,53 @@
+.product {
+   width: 100%;
+    line-height: 1.5;
+
+    @include tablet {
+        @include flex;
+
+        & > * + * {
+            margin-left: 2rem;
+        }
+    }
+   
+    .breadcrumb {
+        margin-bottom: 1rem;
+        color: $md-gray;
+        font-weight: 100;
+    }
+
+    .product__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product__title {
+        margin: 0;
+        color: $text-color;
+        font-size: clamp(2rem, 2.5vw, 2.5rem);
+    }
+
+   .product__ref, .product__discount{
+        color: $lg-gray;
+    }
+
+    .product__price {
+        color: $primary-color;
+        font-size: clamp(1.6rem, 1.6vw, 2rem);
+        font-weight: bold;
+    }
+
+    .input-box {
+        margin-top: 1rem;
+        padding: 0.8em 1.6em 0.8em 0;
+        text-align: left;
+    }
+}
+
+.product__description {
+    margin-top: 2rem;
+    font-size: 1.6em;
+    p {
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,92 @@
+main {
+    @include col-10;
+
+    .login,
+    .register {
+        min-height: 90vh;
+
+        .container--md {
+            margin: 2em auto;
+
+            h1,
+            h3 {
+                font-weight: 100;
+                text-align: center;
+            }
+
+            h1 {
+                padding-bottom: 1.6em;
+                border-bottom: 1px solid $md-gray;
+            }
+
+            h3 {
+                padding: 2em 0;
+            }
+            .login__form {
+                display: flex;
+                flex-direction: column;
+
+                .required {
+                    color: red;
+                }
+
+                label {
+                    margin-bottom: $margin;
+                    color: $text-color;
+                }
+
+                .login__form--input,
+                .login__form--btn {
+                    margin-bottom: 1.6em;
+                    padding: 0.8em 1.6em;
+                    outline: none;
+                }
+
+                .login__form--btn {
+                    background-color: $primary-color;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: darken($primary-color, 10%);
+                    }
+                }
+
+                .signup {
+                    background-color: unset;
+                    border: 1px solid $md-gray;
+                    color: $text-color;
+                    font-size: 1.4em;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: $primary-color;
+                        border: none;
+                        color: white;
+                    }
+                }
+            }
+
+            p {
+                margin-bottom: 1.6em;
+                color: $md-gray;
+                font-size: 1.4em;
+            }
+
+            .container--flex {
+                input,
+                label,
+                a {
+                    margin-bottom: 1.6em;
+                    color: $md-gray;
+                    font-size: 1.4em;
+                }
+
+                label {
+                    padding-left: 0.5em;
+                }
+            }
+        }
+    }
+}

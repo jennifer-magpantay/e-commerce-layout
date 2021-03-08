@@ -1,0 +1,11 @@
+// CONTAINERS
+.container {
+    width: 100%;
+    height: auto;
+}
+
+.container--flex {
+    @include flex;
+    width: 100%;
+    height: auto;
+}

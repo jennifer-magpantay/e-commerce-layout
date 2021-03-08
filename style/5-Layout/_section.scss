@@ -1,0 +1,19 @@
+// SECTION WIDTH = 10 COLUMNS
+section {
+    @include grid-column-10;
+    padding: 1rem 0;
+    h2 {
+        @include title;
+    }
+    h3 {
+        @include subtitle;
+    }
+    h4 {
+        @include caption;
+    }
+   }
+
+section:not(:last-child) {
+    border-bottom: 1px solid $md-gray;  
+}
+

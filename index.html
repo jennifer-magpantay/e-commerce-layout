@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style -->
+    <link rel="stylesheet" href="style/index.css">
+    <title>E-commerce Layout | Home</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <!-- nav bar -->
+        <nav>
+            <!-- logo -->
+            <img src="./images/logo-codeby.png" alt="Logo">
+            <!-- search box -->
+            <fieldset>
+                <label for="search">Search Products</label>
+                <input type="text" class="search" id="search" />
+                <button class="button--search">SEARCH</button>
+            </fieldset>
+            <!-- nav menu: add a container to hold the menu -->
+            <div class="menu__container">
+                <!-- then, inside of it set an input + label -->
+                <ul class="menu__links">
+                    <li><a href="#">
+                            <h4>About Us</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Our Services</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>My Account</h4>
+                        </a></li>
+                </ul>
+                <input id="menu" class="menu" type="checkbox">
+                <!-- the label will de used to create the main/middle line of the hamburguer menu -->
+                <label for="menu"></label>
+                <!-- the other lines will be created by using :before & :after on css -->
+            </div>
+        </nav>
+        <!-- categories links: dropdown -->
+        <div class="header__links--categories">
+           <!-- to create a dropdown menu you should start with a ul, that will work as the 'container' for all the items/links of the menu -->
+        <ul class="dropdown">
+            <!-- then, each item of the menu will be created as a list -->
+            <li class="dropdown__item">
+                <!-- inside each list, you will set a link or a span-->
+                <span>HOME</span>
+            </li>
+
+            <li class="dropdown__item">
+                <!-- to create a submenu, you have to set another ul inside of the item you want to add the submenu-->
+                <span>CATEGORIES</span>
+                <ul class="dropdown__submenu">
+                    <li class="dropdown__submenu-item">
+                        <a href="" class="dropdown__submenu-link">CLOTHES</a>
+                    </li>
+                    <li class="dropdown__submenu-item">
+                        <a href="" class="dropdown__submenu-link">ACESSORIES</a>
+                    </li>
+                    <li class="dropdown__submenu-item">
+                        <a href="" class="dropdown__submenu-link">SALES</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="dropdown__item">
+                <span>SUPPORT</span>
+                <ul class="dropdown__submenu">
+                    <li class="dropdown__submenu-item">
+                        <a href="" class="dropdown__submenu-link">FAQ</a>
+                    </li>
+                    <li class="dropdown__submenu-item">
+                        <a href="" class="dropdown__submenu-link">RETURN</a>
+                    </li>
+                    <li class="dropdown__submenu-item">
+                        <a href="" class="dropdown__submenu-link">REFUND</a>
+                    </li>
+                    <li class="dropdown__submenu-item">
+                        <a href="" class="dropdown__submenu-link">HELP</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="dropdown__item">
+                <a href="" class="dropdown__link">ABOUT</a>
+            </li>
+
+            <li class="dropdown__item">
+                <a href="" class="dropdown__link">CONTACT</a>
+            </li>
+        </ul>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <h1 class="title">Lorem ipsum dolor sit.</h1>
+        <!-- section 1 : carouseel-->
+        <section>
+            <!-- for the carrousel, we will use the container to set a space for the items -->
+            <div class="container">
+                <!-- and a div to hold all the items -->
+                <div id="caroussel__items" class="caroussel__items">
+                    <!-- inside div, all items to be displayed on the caroussel -->
+                  <img class="item__img" src="./images/image-600x400.jpg" 
+                  alt="Random Image" 
+                  srcset="
+                  ./images/image-600x400.jpg 600w, 
+                  ./images/image-800x400.jpg 800w,
+                  ./images/image-1200x600.jpg 1200w">
+                    <!-- img: set a fallback image and a srcset with different sizes -->
+                    <img class="item__img" src="./images/image-600x400.jpg" 
+                    alt="Random Image" 
+                    srcset="
+                    ./images/image-600x400.jpg 600w, 
+                    ./images/image-800x400.jpg 800w,
+                    ./images/image-1200x600.jpg 1200w">
+
+                    <img class="item__img" src="./images/image-600x400.jpg" 
+                  alt="Random Image" 
+                  srcset="
+                  ./images/image-600x400.jpg 600w, 
+                  ./images/image-800x400.jpg 800w,
+                  ./images/image-1200x600.jpg 1200w">
+
+                  <img class="item__img" src="./images/image-600x400.jpg" 
+                  alt="Random Image" 
+                  srcset="
+                  ./images/image-600x400.jpg 600w, 
+                  ./images/image-800x400.jpg 800w,
+                  ./images/image-1200x600.jpg 1200w">
+
+                  <img class="item__img" src="./images/image-600x400.jpg" 
+                  alt="Random Image" 
+                  srcset="
+                  ./images/image-600x400.jpg 600w, 
+                  ./images/image-800x400.jpg 800w,
+                  ./images/image-1200x600.jpg 1200w">
+                 
+                </div>
+            </div>
+        </section>
+        <!-- section 2: best sellers -->
+        <section>
+            <h4 class="caption">Lorem.</h4>
+            <h2 class="section__title">Best Sellers</h2>
+            <h3 class="section__subtitle">Lorem ipsum dolor sit.</h3>
+            <p class="section__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, doloribus.</p>
+            <!-- cards with products -->
+            <div class="card__container">
+                <div class="card">
+                    <div class="card__img">
+                        <img src="https://picsum.photos/300/350" alt="Random Image"
+                        srcset="https://picsum.photos/300/350, https://picsum.photos/400/450 2x, https://picsum.photos/500/550 3x">
+                    </div>
+
+                    <div class="card__body">
+                        <h3 class="card__title">Product Title</h3>
+                        <p class="card__description">Add a short product description here</p>
+                        <p class="card__price">3x 79.99</p>
+                        <a class="button" href="./product.html">BUY PRODUCT</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="https://picsum.photos/300/350" alt="Random Image"
+                        srcset="https://picsum.photos/300/350, https://picsum.photos/400/450 2x, https://picsum.photos/500/550 3x">
+                    </div>             
+
+                    <div class="card__body">
+                        <h3 class="card__title">Product Title</h3>
+                        <p class="card__description">Add a short product description here</p>
+                        <p class="card__price">3x 79.99</p>
+                        <a class="button" href="./product.html">BUY PRODUCT</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="https://picsum.photos/300/350" alt="Random Image"
+                        srcset="https://picsum.photos/300/350, https://picsum.photos/400/450 2x, https://picsum.photos/500/550 3x">
+                    </div>
+
+                    <div class="card__body">
+                        <h3 class="card__title">Product Title</h3>
+                        <p class="card__description">Add a short product description here</p>
+                        <p class="card__price">3x 79.99</p>
+                        <a class="button" href="./product.html">BUY PRODUCT</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- section 3: best deals caroussel -->
+        <section>
+            <h4 class="caption">Lorem.</h4>
+            <h2 class="section__title">Unbelievable Deals</h2>
+            <h3 class="section__subtitle">Lorem ipsum dolor sit.</h3>
+            <p class="section__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, doloribus.</p>
+            <div class="card__container">
+                <div class="card">
+                    <div class="card__img">
+                        <img src="https://picsum.photos/300/350" alt="Random Image"
+                        srcset="https://picsum.photos/300/350, https://picsum.photos/400/450 2x, https://picsum.photos/500/550 3x">
+                    </div>
+
+                    <div class="card__body">
+                        <h3 class="card__title">Product Title</h3>
+                        <p class="card__description">Add a short product description here</p>
+                        <p class="card__price">3x 79.99</p>
+                        <a class="button" href="./product.html">BUY PRODUCT</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="https://picsum.photos/300/350" alt="Random Image"
+                        srcset="https://picsum.photos/300/350, https://picsum.photos/400/450 2x, https://picsum.photos/500/550 3x">
+                    </div>
+
+                    <div class="card__body">
+                        <h3 class="card__title">Product Title</h3>
+                        <p class="card__description">Add a short product description here</p>
+                        <p class="card__price">3x 79.99</p>
+                        <a class="button" href="./product.html">BUY PRODUCT</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="https://picsum.photos/300/350" alt="Random Image"
+                        srcset="https://picsum.photos/300/350, https://picsum.photos/400/450 2x, https://picsum.photos/500/550 3x">
+                    </div>
+
+                    <div class="card__body">
+                        <h3 class="card__title">Product Title</h3>
+                        <p class="card__description">Add a short product description here</p>
+                        <p class="card__price">3x 79.99</p>
+                        <a class="button" href="./product.html">BUY PRODUCT</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="footer__container">
+            <ul>
+                <li><a href="#">
+                        <h4>ABOUT US</h4>
+                    </a></li>
+                <li><a href="#">
+                        <h4>OUR SERVICES</h4>
+                    </a></li>
+                <li><a href="#">
+                        <h4>HELP</h4>
+                    </a></li>
+            </ul>
+            <p class='caption'>Lorem ipsum dolor sit amet consectetur adipisicing elit | Rerum, ab.</p>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

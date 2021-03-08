@@ -1,0 +1,24 @@
+footer {
+  width: 100%;
+  height: auto;
+  padding: 2% 0;
+  background-color: $dk-gray;
+  
+
+  .footer__container {
+    width: auto;
+    margin: 0 auto;
+    padding: 1% 0;
+    color: $text-color-lg;
+    text-align: center;    
+
+    a {
+      @include caption;
+      font-size: 1.4em;
+      letter-spacing: 1px;
+    }
+  }  
+  .caption {
+    font-size: 1.2rem;
+  } 
+}

@@ -1,0 +1,35 @@
+// All imports
+// 1-Helpers
+@import './1-Helpers/variables';
+@import './1-Helpers/mixins';
+@import './1-Helpers/fonts';
+@import './1-Helpers/media-queries';
+
+// 2-Tools
+@import './2-Tools/normalize';
+
+// 3-Basic
+@import './3-Basic/reset';
+@import './3-Basic/containers';
+@import './3-Basic/button';
+
+// 4-Modules
+@import './4-Modules/menu';
+@import './4-Modules/card';
+@import './4-Modules/caroussel';
+@import './4-Modules/form';
+
+// 5-Layout
+@import './5-Layout/header';
+@import './5-Layout/navbar';
+@import './5-Layout/main';
+@import './5-Layout/section';
+@import './5-Layout/footer';
+
+// 6-Pages
+@import './6-Pages/home';
+@import './6-Pages/product';
+// @import './6-Pages/search';
+// @import './6-Pages/login';
+// @import './6-Pages/checkout-confirmation';
+@import './6-Pages/error';
