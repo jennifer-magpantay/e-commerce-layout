@@ -4,11 +4,15 @@
     width: 100%;
     height: auto;    
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start;    
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+
+    & > * {
+        margin-top: 0;
+    }
 
     @include mobile {
         max-height: 400px;
@@ -22,6 +26,7 @@
         width: 90%;
         height: auto;
         flex: none;
+        // margin-top: 0;
         border-radius: 4px;
         pointer-events: none;
         object-fit: cover;

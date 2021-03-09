@@ -4,24 +4,20 @@
     width: 83.33%;
     height: auto;
     margin: 0 auto;
-    // padding: 1em 0;
 }
 
 // TEXT STYLE
 @mixin title {
-    margin-bottom: 1rem;
     font-family: 'Roboto Slab', serif;
 }
 
 @mixin subtitle {
-    margin-bottom: 1rem;
     color: $dk-gray;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
 
 @mixin caption {
-    margin-bottom: 0.5rem;
     font-family: 'Bebas Neue', cursive;
     font-weight: 100;
 }

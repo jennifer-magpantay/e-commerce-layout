@@ -6,73 +6,15 @@
     padding: 0;
     margin: 0;
 }
-/* ---------- GLOBAL STYLES ---------- */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-font,
-img,
-input,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-select,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
-    margin: 0px;
-    padding: 0px;
-    border: none;
-    border-radius: 0;
-    border-style: none;
-    outline: 0px;
+
+// reseting a margin top to every single element that has something before automatically and at once
+* + * {
+    margin-top: 1em;
 }
+// then, you have to set the components that has nothing before to margin-top: 0 to fix any align problem
+// & > * { margin-top: 0;}
+
+/* ---------- GLOBAL STYLES ---------- */
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -119,7 +61,11 @@ body {
         margin: 0;
         padding: 0;
         list-style: none;
+
+        & > * {
+            margin-top: 0;
     }
+}
 
     li {
         display: inline-block;
